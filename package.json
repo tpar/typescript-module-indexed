@@ -11,18 +11,18 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.sayHello"
+        "onCommand:New.Ts.Module"
     ],
     "main": "./out/extension",
     "contributes": {
         "commands": [{
-            "command": "extension.sayHello",
-            "title": "Hello World"
+            "command": "New.Ts.Module",
+            "title": "New Typescript Module"
         }],
         "menus":{
             "explorer/context": [{
                 "when": "explorerResourceIsFolder",
-                "command": "extension.sayHello",
+                "command": "New.Ts.Module",
                 "group": "4_search"
           }]
         }
