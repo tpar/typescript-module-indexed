@@ -1,7 +1,7 @@
 'use strict';
 
 import * as vscode from 'vscode';
-import * as fs from 'fs';
+import { ModuleGenerator } from './generator/module-generator';
 
 interface NewModuleParams {
 	fsPath: string;
@@ -19,9 +19,7 @@ export function activate(context: vscode.ExtensionContext) {
 			});
 
 			if (moduleName) {
-				const commands = await vscode.commands.getCommands();
-				console.log(commands); 
-				fs.mkdirSync(args.fsPath + '/' + moduleName);
+				new ModuleGenerator(args.fsPath, moduleName).create();
 			}
 		}
 
