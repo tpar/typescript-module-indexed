@@ -1,6 +1,12 @@
 # typescript-module-indexed README
 
-This is the README for your extension "typescript-module-indexed". After writing up a brief description, we recommend including the following sections.
+This is a simple VS Code extension to create an "indexed typescript module." It appears in the file explorer menu of vs code. Upon user input, of new TS module e.g. "MyModule" the following files will be created
+
++ MyModule
+    - MyModule.ts
+    - Index.ts
+    
+I personally like to have a index.ts file for ts modules, to easily organise exports. I built this as a basic productivity tool.
 
 ## Features
 
