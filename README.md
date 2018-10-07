@@ -8,15 +8,23 @@ This is a simple VS Code extension to create an "indexed typescript module." It 
     
 I personally like to have a index.ts file for ts modules, to easily organise exports. I built this as a basic productivity tool.
 
+Link in Marketplace:
+https://marketplace.visualstudio.com/items?itemName=tejasp.typescript-module-indexed
+
+
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+Creation of Module as below,
 
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
++ MyModule
+    - MyModule.ts
+    - Index.ts
+    
++ my-module
+    - my-module.ts
+    - Index.ts
+    
+In the second case, in my-module.ts, a class will be defined, called MyModule. 
 
 ## Requirements
 
@@ -34,38 +42,16 @@ This extension contributes the following settings:
 * `myExtension.thing`: set to `blah` to do something
 
 ## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
+No support for ts react (.tsx) modules yet - I need to add that functionality in
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
+### 0.0.2
 
-### 1.0.0
+hyphen seperated module names resolution
 
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+### 0.0.1
+First release. Create a module - to generate a ts file and an index file associated with it
 
 -----------------------------------------------------------------------------------------------------------
 
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
