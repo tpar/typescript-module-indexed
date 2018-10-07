@@ -52,7 +52,7 @@ export class ModuleGenerator {
     }
 
     private createIndexFile() {
-        const content = `export * from './${this.moduleName}'`;
+        const content = `export * from './${this.moduleName}';`;
         this.createFile('index.ts', content);
     }
 
