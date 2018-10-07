@@ -1,7 +1,7 @@
 {
     "name": "typescript-module-indexed",
     "displayName": "typescript-module-indexed",
-    "description": "To create index.ts file when creating a new typescript module, as a folder in vs code",
+    "description": "To create index.ts and a associated module file file when creating a new typescript module, as a folder in vs code",
     "version": "0.0.1",
     "publisher": "Tejas",
     "engines": {
