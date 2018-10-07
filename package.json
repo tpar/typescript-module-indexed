@@ -3,7 +3,11 @@
     "displayName": "typescript-module-indexed",
     "description": "To create index.ts and a associated module file file when creating a new typescript module, as a folder in vs code",
     "version": "0.0.1",
-    "publisher": "Tejas",
+    "publisher": "tejasp",
+    "repository": "https://github.com/tpar/typescript-module-indexed",
+    "keywords": [
+        "typescript", "file", "utility", "typescript-index", "index"
+    ],
     "engines": {
         "vscode": "^1.27.0"
     },

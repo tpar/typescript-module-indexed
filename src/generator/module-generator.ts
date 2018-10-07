@@ -35,8 +35,19 @@ export class ModuleGenerator {
 		fs.mkdirSync(this.tsModulePath);
     }
 
+    private generateClassName() {
+        if (this.moduleName.indexOf('-') > -1 ) {
+            return this.moduleName.split('-')
+                .map(part => { return part.charAt(0).toUpperCase() + part.substr(1);})
+                .join('');
+        }
+
+        return this.moduleName;
+    }
+
     private createModuleFile() {
-        const content = `\n` + `export class ${this.moduleName} {}`;
+        const name = this.generateClassName();
+        const content = `\n` + `export class ${name} {}`;
         this.createFile(this.moduleName + '.ts', content);
     }
 
