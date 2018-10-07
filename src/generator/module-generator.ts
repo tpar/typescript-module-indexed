@@ -5,13 +5,16 @@ import * as fs from 'fs';
  *  This will generate the ts module
  *  @param rootPath - this is the base path at which the folder for the module will be created
  *  @param moduleName - the name of the module (which is to be provided by user)
+ *  @param osType - The OS on which VS Code is running. 
  */
 
 export class ModuleGenerator {
 
     constructor(
         private rootPath: string, 
-        private moduleName: string
+        private moduleName: string,
+        private osType: string
+
     ) {}
 
     public create() {
@@ -26,6 +29,10 @@ export class ModuleGenerator {
     }
 
     private get tsModulePath(): string {
+        if (this.osType === 'Windows_NT') {
+            return this.rootPath + '\\' + this.moduleName;
+        }
+
         return this.rootPath + '/' + this.moduleName;
     }
 
@@ -44,7 +51,11 @@ export class ModuleGenerator {
     }
 
     private createFile(fileName: string, content: string = '') {
-        fs.createWriteStream(this.tsModulePath + '/' + fileName, {
+
+        const path = this.osType === 'Windows_NT' ? (this.tsModulePath + '/' + fileName) 
+            : this.tsModulePath + '\\' + fileName;
+
+        fs.createWriteStream(path, {
             autoClose: true,
             encoding: 'UTF-8'
         })
