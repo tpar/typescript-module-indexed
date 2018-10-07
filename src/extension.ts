@@ -1,7 +1,6 @@
 'use strict';
 
 import * as vscode from 'vscode';
-import * as os from 'os';
 
 import { ModuleGenerator } from './generator/module-generator';
 
@@ -21,7 +20,7 @@ export function activate(context: vscode.ExtensionContext) {
 			});
 
 			if (moduleName) {
-				new ModuleGenerator(args.fsPath, moduleName, os.type()).create();
+				new ModuleGenerator(args.fsPath, moduleName).create();
 			}
 		}
 
