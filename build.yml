@@ -1,4 +1,4 @@
-yamljobs:
+jobs:
   - job: Windows
     pool:
       name: Hosted VS2017
