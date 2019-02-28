@@ -13,7 +13,6 @@ export class ModuleGenerator {
     constructor(
         private rootPath: string, 
         private moduleName: string,
-
     ) {}
 
     public create() {

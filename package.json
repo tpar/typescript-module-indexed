@@ -15,20 +15,35 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:New.Ts.Module"
+        "onCommand:New.Ts.Module",
+        "onCommand:New.Ts.Module.Custom"
+
     ],
     "main": "./out/extension",
     "contributes": {
-        "commands": [{
+        "commands": [
+        {
             "command": "New.Ts.Module",
             "title": "New Typescript Module"
-        }],
+        }, 
+        {
+            "command": "New.Ts.Module.Custom",
+            "title": "New Typescript Custom Module"
+        }
+        ],
         "menus":{
-            "explorer/context": [{
-                "when": "explorerResourceIsFolder",
-                "command": "New.Ts.Module",
-                "group": "4_search"
-          }]
+            "explorer/context": [
+                {
+                    "when": "explorerResourceIsFolder",
+                    "command": "New.Ts.Module",
+                    "group": "custom"
+                },
+                {
+                    "when": "explorerResourceIsFolder",
+                    "command": "New.Ts.Module.Custom",
+                    "group": "custom"
+                }
+            ]
         }
     },
     "scripts": {
